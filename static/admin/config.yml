@@ -1,3 +1,22 @@
 backend:
-name: gatsby-netlify-starter
-repo: gb9box/gatsby-netlify-starter
+  name: github
+  repo: gb9box/gatsby-netlify-starter
+
+media_folder: static/images
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      # TODO: #339 - will uncomment in next PR
+      - file: "src/pages/index.md"
+        label: "Home"
+        name: "home"
+        fields:
+          - {
+              label: "Template",
+              name: "template",
+              widget: "hidden",
+              default: "home-page",
+            }
+          - { label: "Path", name: "path", widget: "hidden", default: "/" }
